@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meniu — Grassi Coffee</title>
+<meta name="description" content="Meniul complet Grassi Coffee: cafea Standard și 100% Arabica, cafea de autor, matcha, smoothie-uri, băuturi funcționale și ceai.">
+<link rel="icon" href="assets/logo-dark.png" type="image/png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/logo-dark.png" alt="Grassi Coffee logo">
+      <span>GRASSI<small>COFFEE</small></span>
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" data-ro="Acasă" data-ru="Главная">Acasă</a></li>
+        <li><a href="meniu.html" class="active" data-ro="Meniu" data-ru="Меню">Meniu</a></li>
+        <li><a href="despre.html" data-ro="Despre noi" data-ru="О нас">Despre noi</a></li>
+        <li><a href="contact.html" data-ro="Contact" data-ru="Контакты">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-toggle">
+        <button data-lang="ro" class="active">RO</button>
+        <button data-lang="ru">RU</button>
+      </div>
+      <a href="contact.html" class="btn btn-primary" data-ro="Locațiile noastre" data-ru="Наши локации">Locațiile noastre</a>
+      <button class="wishlist-toggle" aria-label="Lista mea" type="button"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20.5s-7.5-4.6-10-9.2C.4 8 1.8 4.5 5 3.6c2-.6 4 .1 5.2 1.8L12 7.3l1.8-1.9C15 3.7 17 3 19 3.6c3.2.9 4.6 4.4 3 7.7-2.5 4.6-10 9.2-10 9.2z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="wishlist-count" hidden>0</span></button>
+      <button class="nav-toggle" aria-label="Meniu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="section-tag" data-ro="Meniul nostru" data-ru="Наше меню">Meniul nostru</span>
+    <h1 data-ro="Fiecare băutură, pe gustul tău" data-ru="Каждый напиток — по твоему вкусу">Fiecare băutură, pe gustul tău</h1>
+    <p data-ro="Cafea Standard și 100% Arabica, cafea de autor, matcha, smoothie-uri și băuturi funcționale. Toate prețurile sunt în lei moldovenești (MDL)." data-ru="Кофе Standard и 100% арабика, авторский кофе, матча, смузи и функциональные напитки. Все цены в молдавских леях (MDL).">Cafea Standard și 100% Arabica, cafea de autor, matcha, smoothie-uri și băuturi funcționale. Toate prețurile sunt în lei moldovenești (MDL).</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container">
+    <div class="pill-row">
+      <button class="pill active" data-target="standard" data-ro="Cafea Standard" data-ru="Кофе Standard">Cafea Standard</button>
+      <button class="pill" data-target="arabica" data-ro="100% Arabica" data-ru="100% Арабика">100% Arabica</button>
+      <button class="pill" data-target="special" data-ro="Cafea de autor" data-ru="Авторский кофе">Cafea de autor</button>
+      <button class="pill" data-target="matcha" data-ro="Matcha" data-ru="Матча">Matcha</button>
+      <button class="pill" data-target="smoothie" data-ro="Smoothie" data-ru="Смузи">Smoothie</button>
+      <button class="pill" data-target="lemonade" data-ro="Limonadă" data-ru="Лимонад">Limonadă</button>
+      <button class="pill" data-target="protein" data-ro="Protein &amp; Foam" data-ru="Протеин и пенка">Protein &amp; Foam</button>
+      <button class="pill" data-target="tea" data-ro="Ceai" data-ru="Чай">Ceai</button>
+      <button class="pill" data-target="addons" data-ro="Adaosuri" data-ru="Добавки">Adaosuri</button>
+    </div>
+
+    <!-- STANDARD -->
+    <div id="standard" class="mt-40">
+      <div class="section-head">
+        <div>
+          <h2 data-ro="Cafea Standard" data-ru="Кофе Standard">Cafea Standard</h2>
+          <p data-ro="Amestec clasic de cafea, prețuri accesibile pentru consumul de zi cu zi." data-ru="Классическая кофейная смесь, доступные цены на каждый день.">Amestec clasic de cafea, prețuri accesibile pentru consumul de zi cu zi.</p>
+        </div>
+      </div>
+      <div class="price-table-wrap">
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th data-ro="Băutură" data-ru="Напиток">Băutură</th>
+              <th data-ro="Mic" data-ru="Маленький">Mic</th>
+              <th data-ro="Regular" data-ru="Средний">Regular</th>
+              <th data-ro="Mare" data-ru="Большой">Mare</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Ristretto</td><td>25</td><td>37</td><td>—</td></tr>
+            <tr><td>Espresso</td><td>25</td><td>37</td><td>—</td></tr>
+            <tr><td>Americano</td><td>25</td><td>37</td><td>49</td></tr>
+            <tr><td>Macchiato</td><td>28</td><td>—</td><td>—</td></tr>
+            <tr><td>Cappuccino</td><td>34</td><td>46</td><td>58</td></tr>
+            <tr><td>Latte</td><td>39</td><td>51</td><td>63</td></tr>
+            <tr><td>Flat White</td><td>45</td><td>57</td><td>69</td></tr>
+            <tr><td>Raf</td><td>45</td><td>57</td><td>69</td></tr>
+            <tr><td data-ro="Cacao" data-ru="Какао">Cacao</td><td>35</td><td>45</td><td>55</td></tr>
+            <tr><td data-ro="Ciocolată caldă" data-ru="Горячий шоколад">Hot Chocolate</td><td>40</td><td>—</td><td>60</td></tr>
+            <tr><td>Matcha</td><td>55</td><td>65</td><td>75</td></tr>
+            <tr><td data-ro="Ceai" data-ru="Чай">Tea</td><td>25</td><td>30</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ARABICA -->
+    <div id="arabica" class="mt-40">
+      <div class="section-head">
+        <div>
+          <h2>100% Arabica</h2>
+          <p data-ro="Boabe 100% Arabica, pentru un gust mai fin și mai rotund." data-ru="100% арабика — для более мягкого и насыщенного вкуса.">Boabe 100% Arabica, pentru un gust mai fin și mai rotund.</p>
+        </div>
+      </div>
+      <div class="price-table-wrap">
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th data-ro="Băutură" data-ru="Напиток">Băutură</th>
+              <th data-ro="Mic" data-ru="Маленький">Mic</th>
+              <th data-ro="Regular" data-ru="Средний">Regular</th>
+              <th data-ro="Mare" data-ru="Большой">Mare</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Ristretto</td><td>30</td><td>42</td><td>—</td></tr>
+            <tr><td>Espresso</td><td>30</td><td>42</td><td>—</td></tr>
+            <tr><td>Americano</td><td>33</td><td>42</td><td>54</td></tr>
+            <tr><td>Macchiato</td><td>39</td><td>—</td><td>—</td></tr>
+            <tr><td>Cappuccino</td><td>39</td><td>51</td><td>63</td></tr>
+            <tr><td>Flat White</td><td>50</td><td>—</td><td>68</td></tr>
+            <tr><td>Latte</td><td>44</td><td>56</td><td>68</td></tr>
+            <tr><td>Raf</td><td>50</td><td>62</td><td>74</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="menu-note" data-ro="Toate băuturile pot fi preparate decaf sau cu lapte vegetal / fără lactoză — vezi secțiunea Adaosuri." data-ru="Любой напиток можно приготовить без кофеина или на растительном / безлактозном молоке — см. раздел «Добавки».">Toate băuturile pot fi preparate decaf sau cu lapte vegetal / fără lactoză — vezi secțiunea Adaosuri.</p>
+    </div>
+
+    <!-- SPECIAL / SIGNATURE COFFEE -->
+    <div id="special" class="mt-40">
+      <div class="section-head">
+        <div>
+          <span class="section-tag" data-ro="Semnătură" data-ru="Фирменное">Semnătură</span>
+          <h2 data-ro="Cafea de autor" data-ru="Авторский кофе">Cafea de autor</h2>
+          <p data-ro="Rețete originale Grassi, cu arome sezoniere." data-ru="Оригинальные рецепты Grassi с сезонными вкусами.">Rețete originale Grassi, cu arome sezoniere.</p>
+        </div>
+      </div>
+      <div class="menu-grid">
+        <div class="item-card"><div class="cup"><img src="assets/drinks/ube-latte.png" alt="Ube Latte" loading="lazy"></div><h4>Ube Latte <span class="section-tag" style="margin:0;" data-ro="Nou" data-ru="Новинка">Nou</span></h4><p data-ro="Latte cremos cu aromă delicată de ube (cartof dulce violet) și un strat catifelat de vanilie." data-ru="Кремовый латте с деликатным ароматом убе (фиолетовый батат) и бархатистым слоем ванили.">Latte cremos cu aromă delicată de ube și un strat catifelat de vanilie.</p><div class="card-actions"><span class="price" data-ro="Preț în cafenea" data-ru="Цена в кофейне">Preț în cafenea</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><img src="assets/drinks/grassi-coffee.png" alt="Iced Grassi Coffee" loading="lazy"></div><h4>Grassi Coffee</h4><p data-ro="Băutură signature, latte cremos cu aromă fină și echilibrată." data-ru="Фирменный напиток, кремовый латте с тонким и сбалансированным ароматом.">Băutură signature, latte cremos cu aromă fină și echilibrată.</p><div class="card-actions"><span class="price">70 MDL</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><svg viewBox="0 0 64 64" fill="none"><path d="M14 22h36l-3 30a6 6 0 01-6 5.4H23a6 6 0 01-6-5.4L14 22z" fill="#fff" fill-opacity=".85"/><path d="M18 22h28" stroke="#3A281B" stroke-width="2"/><ellipse cx="32" cy="20" rx="18" ry="4" fill="#fff" fill-opacity=".6"/><path d="M48 26c6-1 9 3 9 7s-3 8-9 8" stroke="#3A281B" stroke-width="2" fill="none"/></svg></div><h4>Chocolate Halva Raf</h4><p data-ro="Raf cu note de ciocolată și halva, cremos și dulce." data-ru="Раф с нотами шоколада и халвы, кремовый и сладкий.">Raf cu note de ciocolată și halva, cremos și dulce.</p><div class="card-actions"><span class="price">70 MDL</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><img src="assets/drinks/peanut-butter-latte.png" alt="Peanut Butter Iced Latte" loading="lazy"></div><h4>Peanut Butter Latte</h4><p data-ro="Latte rece cremos cu aromă intensă de unt de arahide, echilibrat și ușor dulce." data-ru="Холодный кремовый латте с насыщенным ароматом арахисового масла, сбалансированный и в меру сладкий.">Latte rece cremos cu aromă intensă de unt de arahide.</p><div class="card-actions"><span class="price">70 MDL</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><svg viewBox="0 0 64 64" fill="none"><path d="M14 22h36l-3 30a6 6 0 01-6 5.4H23a6 6 0 01-6-5.4L14 22z" fill="#fff" fill-opacity=".85"/><path d="M18 22h28" stroke="#3A281B" stroke-width="2"/><ellipse cx="32" cy="20" rx="18" ry="4" fill="#fff" fill-opacity=".6"/><path d="M48 26c6-1 9 3 9 7s-3 8-9 8" stroke="#3A281B" stroke-width="2" fill="none"/></svg></div><h4>Earl Grey Latte</h4><p data-ro="Latte parfumat cu ceai Earl Grey și note florale de bergamotă." data-ru="Латте с ароматом чая Эрл Грей и цветочными нотами бергамота.">Latte parfumat cu ceai Earl Grey și note florale de bergamotă.</p><div class="card-actions"><span class="price">55 MDL</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><img src="assets/drinks/banana-bread-latte.png" alt="Banana Bread Iced Latte" loading="lazy"></div><h4>Banana Bread Latte</h4><p data-ro="Latte cremos cu note dulci de banană și aromă de banana bread, catifelat și reconfortant." data-ru="Кремовый латте со сладкими нотами банана и ароматом бананового хлеба.">Latte cremos cu note dulci de banană și aromă de banana bread.</p><div class="card-actions"><span class="price">75 MDL</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><svg viewBox="0 0 64 64" fill="none"><path d="M14 22h36l-3 30a6 6 0 01-6 5.4H23a6 6 0 01-6-5.4L14 22z" fill="#fff" fill-opacity=".85"/><path d="M18 22h28" stroke="#3A281B" stroke-width="2"/><ellipse cx="32" cy="20" rx="18" ry="4" fill="#fff" fill-opacity=".6"/><path d="M48 26c6-1 9 3 9 7s-3 8-9 8" stroke="#3A281B" stroke-width="2" fill="none"/></svg></div><h4>Toasted Marshmallow Cacao</h4><p data-ro="Cacao cremos cu bezea caramelizată la flacără." data-ru="Кремовое какао с карамелизированным на огне зефиром.">Cacao cremos cu bezea caramelizată la flacără.</p><div class="card-actions"><span class="price">50 MDL</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><img src="assets/drinks/blue-spirulina-latte.png" alt="Blue Spirulina Iced Latte" loading="lazy"></div><h4>Blue Spirulina Latte</h4><p data-ro="Latte rece cu spirulină albastră, bogat în antioxidanți, nutritiv și revigorant." data-ru="Холодный латте с голубой спирулиной, богатый антиоксидантами, питательный и бодрящий.">Latte rece cu spirulină albastră, bogat în antioxidanți.</p><div class="card-actions"><span class="price">55 MDL</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><svg viewBox="0 0 64 64" fill="none"><path d="M14 22h36l-3 30a6 6 0 01-6 5.4H23a6 6 0 01-6-5.4L14 22z" fill="#fff" fill-opacity=".85"/><path d="M18 22h28" stroke="#3A281B" stroke-width="2"/><ellipse cx="32" cy="20" rx="18" ry="4" fill="#fff" fill-opacity=".6"/><path d="M48 26c6-1 9 3 9 7s-3 8-9 8" stroke="#3A281B" stroke-width="2" fill="none"/></svg></div><h4>Pumpkin Spice Cappuccino</h4><p data-ro="Cappuccino de sezon cu scorțișoară și dovleac picant." data-ru="Сезонный капучино с корицей и пряной тыквой.">Cappuccino de sezon cu scorțișoară și dovleac picant.</p><div class="card-actions"><span class="price">60 MDL</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><img src="assets/drinks/biscoff-iced-latte.png" alt="Biscoff Iced Latte" loading="lazy"></div><h4>Biscoff Iced Latte</h4><p data-ro="Latte rece cremos cu aromă de biscuiți caramelizați Biscoff, intens și catifelat." data-ru="Холодный кремовый латте с ароматом карамелизированного печенья Biscoff.">Latte rece cremos cu aromă de biscuiți caramelizați Biscoff.</p><div class="card-actions"><span class="price" data-ro="Preț în cafenea" data-ru="Цена в кофейне">Preț în cafenea</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><img src="assets/drinks/bumble-coffee.png" alt="Bumble Coffee" loading="lazy"></div><h4>Bumble Coffee</h4><p data-ro="Suc proaspăt de portocale combinat cu espresso, servit cu gheață și o felie de portocală." data-ru="Свежевыжатый апельсиновый сок с эспрессо, со льдом и долькой апельсина.">Suc proaspăt de portocale combinat cu espresso, servit cu gheață.</p><div class="card-actions"><span class="price" data-ro="Preț în cafenea" data-ru="Цена в кофейне">Preț în cafenea</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><img src="assets/drinks/grapefruit-bumble.png" alt="Grapefruit Bumble" loading="lazy"></div><h4>Grapefruit Bumble</h4><p data-ro="Suc de grapefruit combinat cu espresso, servit cu gheață și o felie de grapefruit." data-ru="Грейпфрутовый сок с эспрессо, со льдом и долькой грейпфрута.">Suc de grapefruit combinat cu espresso, servit cu gheață.</p><div class="card-actions"><span class="price" data-ro="Preț în cafenea" data-ru="Цена в кофейне">Preț în cafenea</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><img src="assets/drinks/iced-americano-foam.png" alt="Iced Americano Foam" loading="lazy"></div><h4>Iced Americano Foam</h4><p data-ro="Două shot-uri de espresso cu apă rece și gheață, completate cu un strat fin de cold foam." data-ru="Два шота эспрессо с холодной водой и льдом, с тонким слоем колд фоама.">Două shot-uri de espresso, completate cu un strat fin de cold foam.</p><div class="card-actions"><span class="price" data-ro="Preț în cafenea" data-ru="Цена в кофейне">Preț în cafenea</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><img src="assets/drinks/espresso-tonic.png" alt="Espresso Tonic" loading="lazy"></div><h4>Espresso Tonic</h4><p data-ro="Mix rafinat de espresso intens și tonic rece, cu gheață și o felie proaspătă de lămâie." data-ru="Изысканный микс насыщенного эспрессо и холодного тоника, со льдом и долькой лимона.">Mix rafinat de espresso intens și tonic rece, cu gheață.</p><div class="card-actions"><span class="price" data-ro="Preț în cafenea" data-ru="Цена в кофейне">Preț în cafenea</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+      </div>
+    </div>
+
+    <!-- MATCHA -->
+    <div id="matcha" class="mt-40">
+      <div class="section-head">
+        <div>
+          <span class="section-tag" data-ro="Semnătură" data-ru="Фирменное">Semnătură</span>
+          <h2>Matcha</h2>
+          <p data-ro="Matcha premium, în variante clasice și de sezon." data-ru="Премиальная матча — классические и сезонные варианты.">Matcha premium, în variante clasice și de sezon.</p>
+        </div>
+      </div>
+      <div class="menu-grid">
+        <div class="item-card"><div class="cup"><img src="assets/drinks/grassi-matcha.png" alt="Iced Grassi Matcha" loading="lazy"></div><h4 data-ro="Grassi Matcha" data-ru="Grassi Матча">Grassi Matcha</h4><p data-ro="Matcha rece signature, cremoasă și echilibrată, cu un gust fin și revigorant." data-ru="Фирменная холодная матча, кремовая и сбалансированная, с тонким и бодрящим вкусом.">Matcha rece signature, cremoasă și echilibrată.</p><div class="card-actions"><span class="price">75 MDL</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><svg viewBox="0 0 64 64" fill="none"><path d="M14 22h36l-3 30a6 6 0 01-6 5.4H23a6 6 0 01-6-5.4L14 22z" fill="#fff" fill-opacity=".85"/><path d="M18 22h28" stroke="#3A281B" stroke-width="2"/><ellipse cx="32" cy="20" rx="18" ry="4" fill="#fff" fill-opacity=".6"/><path d="M48 26c6-1 9 3 9 7s-3 8-9 8" stroke="#3A281B" stroke-width="2" fill="none"/></svg></div><h4>Spicy Pear Matcha</h4><p data-ro="Matcha cu note picante și dulceața fructului de pară." data-ru="Матча с пряными нотами и сладостью груши.">Matcha cu note picante și dulceața fructului de pară.</p><div class="card-actions"><span class="price">70 MDL</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><svg viewBox="0 0 64 64" fill="none"><path d="M14 22h36l-3 30a6 6 0 01-6 5.4H23a6 6 0 01-6-5.4L14 22z" fill="#fff" fill-opacity=".85"/><path d="M18 22h28" stroke="#3A281B" stroke-width="2"/><ellipse cx="32" cy="20" rx="18" ry="4" fill="#fff" fill-opacity=".6"/><path d="M48 26c6-1 9 3 9 7s-3 8-9 8" stroke="#3A281B" stroke-width="2" fill="none"/></svg></div><h4>Banana Bread Matcha</h4><p data-ro="Matcha cu note dulci de banană și aromă de banana bread." data-ru="Матча со сладкими нотами банана и ароматом бананового хлеба.">Matcha cu note dulci de banană și aromă de banana bread.</p><div class="card-actions"><span class="price">75 MDL</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><svg viewBox="0 0 64 64" fill="none"><path d="M14 22h36l-3 30a6 6 0 01-6 5.4H23a6 6 0 01-6-5.4L14 22z" fill="#fff" fill-opacity=".85"/><path d="M18 22h28" stroke="#3A281B" stroke-width="2"/><ellipse cx="32" cy="20" rx="18" ry="4" fill="#fff" fill-opacity=".6"/><path d="M48 26c6-1 9 3 9 7s-3 8-9 8" stroke="#3A281B" stroke-width="2" fill="none"/></svg></div><h4>Biscoff Matcha</h4><p data-ro="Matcha cu aromă de biscuiți caramelizați Biscoff." data-ru="Матча с ароматом карамелизированного печенья Biscoff.">Matcha cu aromă de biscuiți caramelizați Biscoff.</p><div class="card-actions"><span class="price">75 MDL</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><svg viewBox="0 0 64 64" fill="none"><path d="M14 22h36l-3 30a6 6 0 01-6 5.4H23a6 6 0 01-6-5.4L14 22z" fill="#fff" fill-opacity=".85"/><path d="M18 22h28" stroke="#3A281B" stroke-width="2"/><ellipse cx="32" cy="20" rx="18" ry="4" fill="#fff" fill-opacity=".6"/><path d="M48 26c6-1 9 3 9 7s-3 8-9 8" stroke="#3A281B" stroke-width="2" fill="none"/></svg></div><h4>Coconut Blue Matcha</h4><p data-ro="Matcha albastră cu note cremoase de cocos." data-ru="Голубая матча с кремовыми нотами кокоса.">Matcha albastră cu note cremoase de cocos.</p><div class="card-actions"><span class="price">60 MDL</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><img src="assets/drinks/blue-mango-matcha.png" alt="Iced Blue Mango Matcha" loading="lazy"></div><h4>Mango Blue Matcha</h4><p data-ro="Matcha rece catifelată cu aromă exotică de mango, echilibrată și răcoritoare." data-ru="Бархатистая холодная матча с экзотическим ароматом манго.">Matcha rece catifelată cu aromă exotică de mango.</p><div class="card-actions"><span class="price">60 MDL</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><svg viewBox="0 0 64 64" fill="none"><path d="M14 22h36l-3 30a6 6 0 01-6 5.4H23a6 6 0 01-6-5.4L14 22z" fill="#fff" fill-opacity=".85"/><path d="M18 22h28" stroke="#3A281B" stroke-width="2"/><ellipse cx="32" cy="20" rx="18" ry="4" fill="#fff" fill-opacity=".6"/><path d="M48 26c6-1 9 3 9 7s-3 8-9 8" stroke="#3A281B" stroke-width="2" fill="none"/></svg></div><h4>Peach Hojicha Matcha</h4><p data-ro="Hojicha rece cu note dulci și fructate de piersică." data-ru="Холодная хожича со сладкими фруктовыми нотами персика.">Hojicha rece cu note dulci și fructate de piersică.</p><div class="card-actions"><span class="price">70 MDL</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><img src="assets/drinks/hojicha-tiramisu-matcha.png" alt="Iced Hojicha Tiramisu" loading="lazy"></div><h4>Tiramisu Hojicha Matcha</h4><p data-ro="Hojicha rece cu note fine de tiramisu, cremos, echilibrat și ușor prăjit." data-ru="Холодная хожича с тонкими нотами тирамису, кремовая и сбалансированная.">Hojicha rece cu note fine de tiramisu, cremos și echilibrat.</p><div class="card-actions"><span class="price">70 MDL</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><img src="assets/drinks/strawberry-cake-matcha.png" alt="Strawberry Cake Iced Matcha" loading="lazy"></div><h4 data-ro="Strawberry Cake Matcha" data-ru="Strawberry Cake Матча">Strawberry Cake Matcha</h4><p data-ro="Matcha rece catifelată, combinată cu aromă de căpșuni și accente de desert." data-ru="Бархатистая холодная матча с ароматом клубники и десертными акцентами.">Matcha rece catifelată, cu aromă de căpșuni și accente de desert.</p><div class="card-actions"><span class="price" data-ro="Preț în cafenea" data-ru="Цена в кофейне">Preț în cafenea</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><img src="assets/drinks/blue-blueberry-matcha.png" alt="Iced Blue Blueberry Matcha" loading="lazy"></div><h4 data-ro="Blue Blueberry Matcha" data-ru="Blue Blueberry Матча">Blue Blueberry Matcha</h4><p data-ro="Matcha rece cu note de afine, proaspătă, fină și revigorantă." data-ru="Холодная матча с нотами черники, свежая и бодрящая.">Matcha rece cu note de afine, proaspătă și revigorantă.</p><div class="card-actions"><span class="price" data-ro="Preț în cafenea" data-ru="Цена в кофейне">Preț în cafenea</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+      </div>
+    </div>
+
+    <!-- SMOOTHIE -->
+    <div id="smoothie" class="mt-40">
+      <div class="section-head">
+        <div>
+          <h2 data-ro="Smoothie" data-ru="Смузи">Smoothie</h2>
+          <p data-ro="Fructe și legume proaspete, blendate pe loc." data-ru="Свежие фрукты и овощи, взбитые на месте.">Fructe și legume proaspete, blendate pe loc.</p>
+        </div>
+      </div>
+      <div class="menu-grid">
+        <div class="item-card"><div class="cup"><img src="assets/drinks/berry-smoothie.png" alt="Berry Smoothie" loading="lazy"></div><h4>Berry Smoothie</h4><p data-ro="Căpșuni, banană, coacăze negre și zmeură, blendate cremos." data-ru="Клубника, банан, чёрная смородина и малина, взбитые до кремовой текстуры.">Căpșuni, banană, coacăze negre și zmeură.</p><div class="card-actions"><span class="price">65 MDL</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><img src="assets/drinks/tropic-smoothie.png" alt="Tropic Smoothie" loading="lazy"></div><h4>Tropic Smoothie</h4><p data-ro="Ananas și mango, prospețime tropicală într-o ceașcă." data-ru="Ананас и манго — тропическая свежесть в чашке.">Ananas și mango, prospețime tropicală.</p><div class="card-actions"><span class="price">65 MDL</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><svg viewBox="0 0 64 64" fill="none"><path d="M14 22h36l-3 30a6 6 0 01-6 5.4H23a6 6 0 01-6-5.4L14 22z" fill="#fff" fill-opacity=".85"/><path d="M18 22h28" stroke="#3A281B" stroke-width="2"/><ellipse cx="32" cy="20" rx="18" ry="4" fill="#fff" fill-opacity=".6"/><path d="M48 26c6-1 9 3 9 7s-3 8-9 8" stroke="#3A281B" stroke-width="2" fill="none"/></svg></div><h4>Detox Smoothie</h4><p data-ro="Amestec verde de legume și fructe, pentru o zi ușoară." data-ru="Зелёный микс овощей и фруктов для лёгкого дня.">Amestec verde de legume și fructe.</p><div class="card-actions"><span class="price">65 MDL</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><img src="assets/drinks/blue-spirulina-smoothie.png" alt="Blue Spirulina Smoothie" loading="lazy"></div><h4>Blue Spirulina Smoothie</h4><p data-ro="Spirulină albastră, susține imunitatea și energia." data-ru="Голубая спирулина — поддерживает иммунитет и энергию.">Spirulină albastră, susține imunitatea și energia.</p><div class="card-actions"><span class="price">65 MDL</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+      </div>
+    </div>
+
+    <!-- LEMONADE / REFRESHING -->
+    <div id="lemonade" class="mt-40">
+      <div class="section-head">
+        <div>
+          <span class="section-tag" data-ro="Refreshing" data-ru="Refreshing">Refreshing</span>
+          <h2 data-ro="Limonadă" data-ru="Лимонад">Limonadă</h2>
+          <p data-ro="Limonade răcoritoare, cu fructe proaspete, servite peste gheață." data-ru="Освежающие лимонады со свежими фруктами, поданные со льдом.">Limonade răcoritoare, cu fructe proaspete, servite peste gheață.</p>
+        </div>
+      </div>
+      <div class="menu-grid">
+        <div class="item-card"><div class="cup"><img src="assets/drinks/classic-lemonade.png" alt="Classic Lemonade" loading="lazy"></div><h4 data-ro="Limonadă Clasică" data-ru="Классический лимонад">Classic Lemonade</h4><p data-ro="Limonadă simplă și răcoritoare, cu gust echilibrat de lămâie și o notă dulce-acrișoară." data-ru="Простой и освежающий лимонад со сбалансированным вкусом лимона.">Limonadă simplă și răcoritoare, cu gust echilibrat de lămâie.</p><div class="card-actions"><span class="price" data-ro="Preț în cafenea" data-ru="Цена в кофейне">Preț în cafenea</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><img src="assets/drinks/kiwi-yuzu-lemonade.png" alt="Kiwi Yuzu Lemonade" loading="lazy"></div><h4>Kiwi Yuzu</h4><p data-ro="Limonadă intens răcoritoare, cu kiwi ușor acrișor și yuzu citric și aromat." data-ru="Освежающий лимонад с кисловатым киви и ароматным цитрусовым юдзу.">Limonadă cu kiwi ușor acrișor și yuzu citric și aromat.</p><div class="card-actions"><span class="price" data-ro="Preț în cafenea" data-ru="Цена в кофейне">Preț în cafenea</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><img src="assets/drinks/grapefruit-lychee-lemonade.png" alt="Grapefruit Lychee Lemonade" loading="lazy"></div><h4>Grapefruit Lychee</h4><p data-ro="Limonadă vibrantă cu grapefruit ușor amărui și lychee dulce și floral." data-ru="Яркий лимонад с горьковатым грейпфрутом и сладким цветочным личи.">Limonadă vibrantă cu grapefruit ușor amărui și lychee dulce.</p><div class="card-actions"><span class="price" data-ro="Preț în cafenea" data-ru="Цена в кофейне">Preț în cafenea</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><img src="assets/drinks/dragon-passion-fruit-lemonade.png" alt="Dragon Passion Fruit Lemonade" loading="lazy"></div><h4 data-ro="Fruct de Dragon &amp; Maracuja" data-ru="Драгонфрут и маракуйя">Dragon Passion Fruit</h4><p data-ro="Limonadă tropicală răcoritoare cu fructul dragonului și maracuja, dulce-acrișoară." data-ru="Тропический освежающий лимонад с драконьим фруктом и маракуйей.">Limonadă tropicală cu fructul dragonului și maracuja.</p><div class="card-actions"><span class="price" data-ro="Preț în cafenea" data-ru="Цена в кофейне">Preț în cafenea</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><img src="assets/drinks/peach-jasmine-lemonade.png" alt="Peach Jasmine Lemonade" loading="lazy"></div><h4 data-ro="Piersică &amp; Iasomie" data-ru="Персик и жасмин">Peach Jasmine</h4><p data-ro="Limonadă delicată cu piersică dulce și aromă fină de iasomie, super răcoritoare." data-ru="Нежный лимонад со сладким персиком и тонким ароматом жасмина.">Limonadă delicată cu piersică dulce și aromă fină de iasomie.</p><div class="card-actions"><span class="price" data-ro="Preț în cafenea" data-ru="Цена в кофейне">Preț în cafenea</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><img src="assets/drinks/aloe-bergamot-lemonade.png" alt="Aloe Bergamot Lemonade" loading="lazy"></div><h4 data-ro="Aloe &amp; Bergamotă" data-ru="Алоэ и бергамот">Aloe Bergamot</h4><p data-ro="Limonadă fin echilibrată, cu textura catifelată de aloe și prospețimea citrică a bergamotei." data-ru="Сбалансированный лимонад с бархатистой текстурой алоэ и цитрусовой свежестью бергамота.">Limonadă cu textura catifelată de aloe și prospețime de bergamotă.</p><div class="card-actions"><span class="price" data-ro="Preț în cafenea" data-ru="Цена в кофейне">Preț în cafenea</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+      </div>
+    </div>
+
+    <!-- PROTEIN & FOAM -->
+    <div id="protein" class="mt-40">
+      <div class="section-head">
+        <div>
+          <h2 data-ro="Protein &amp; Foam" data-ru="Протеин и пенка">Protein &amp; Foam</h2>
+          <p data-ro="Adaugă un plus funcțional la orice băutură — opțiuni vegane disponibile." data-ru="Добавьте функциональный бонус к любому напитку — доступны веганские опции.">Adaugă un plus funcțional la orice băutură — opțiuni vegane disponibile.</p>
+        </div>
+      </div>
+      <div class="menu-grid">
+        <div class="item-card"><div class="cup"><svg viewBox="0 0 64 64" fill="none"><path d="M14 22h36l-3 30a6 6 0 01-6 5.4H23a6 6 0 01-6-5.4L14 22z" fill="#fff" fill-opacity=".85"/><path d="M18 22h28" stroke="#3A281B" stroke-width="2"/><ellipse cx="32" cy="20" rx="18" ry="4" fill="#fff" fill-opacity=".6"/><path d="M48 26c6-1 9 3 9 7s-3 8-9 8" stroke="#3A281B" stroke-width="2" fill="none"/></svg></div><h4 data-ro="Cafea cu Collagen" data-ru="Кофе с коллагеном">Collagen Coffee</h4><div class="card-actions"><span class="price">+15 MDL</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><svg viewBox="0 0 64 64" fill="none"><path d="M14 22h36l-3 30a6 6 0 01-6 5.4H23a6 6 0 01-6-5.4L14 22z" fill="#fff" fill-opacity=".85"/><path d="M18 22h28" stroke="#3A281B" stroke-width="2"/><ellipse cx="32" cy="20" rx="18" ry="4" fill="#fff" fill-opacity=".6"/><path d="M48 26c6-1 9 3 9 7s-3 8-9 8" stroke="#3A281B" stroke-width="2" fill="none"/></svg></div><h4 data-ro="Matcha ta cu Protein Foam" data-ru="Ваша матча с протеиновой пенкой">Your Matcha + Protein Foam</h4><div class="card-actions"><span class="price">+15 MDL</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><svg viewBox="0 0 64 64" fill="none"><path d="M14 22h36l-3 30a6 6 0 01-6 5.4H23a6 6 0 01-6-5.4L14 22z" fill="#fff" fill-opacity=".85"/><path d="M18 22h28" stroke="#3A281B" stroke-width="2"/><ellipse cx="32" cy="20" rx="18" ry="4" fill="#fff" fill-opacity=".6"/><path d="M48 26c6-1 9 3 9 7s-3 8-9 8" stroke="#3A281B" stroke-width="2" fill="none"/></svg></div><h4 data-ro="Cafeaua ta favorită cu Protein Foam" data-ru="Ваш любимый кофе с протеиновой пенкой">Your Coffee + Protein Foam</h4><div class="card-actions"><span class="price">+15 MDL</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+        <div class="item-card"><div class="cup"><svg viewBox="0 0 64 64" fill="none"><path d="M14 22h36l-3 30a6 6 0 01-6 5.4H23a6 6 0 01-6-5.4L14 22z" fill="#fff" fill-opacity=".85"/><path d="M18 22h28" stroke="#3A281B" stroke-width="2"/><ellipse cx="32" cy="20" rx="18" ry="4" fill="#fff" fill-opacity=".6"/><path d="M48 26c6-1 9 3 9 7s-3 8-9 8" stroke="#3A281B" stroke-width="2" fill="none"/></svg></div><h4>Protein Shake</h4><div class="card-actions"><span class="price">65 MDL</span><button class="btn-cart" type="button" data-ro="Adaugă" data-ru="Добавить">Adaugă</button></div></div>
+      </div>
+    </div>
+
+    <!-- TEA -->
+    <div id="tea" class="mt-40">
+      <div class="section-head">
+        <div>
+          <h2 data-ro="Ceai" data-ru="Чай">Ceai</h2>
+          <p data-ro="Infuzii de fructe și plante, reci sau calde." data-ru="Фруктовые и травяные настои, холодные или горячие.">Infuzii de fructe și plante, reci sau calde.</p>
+        </div>
+      </div>
+      <div class="addons-grid">
+        <ul class="addon-list">
+          <li><span data-ro="Ghimbir – Lămâie" data-ru="Имбирь – Лимон">Ginger – Lemon</span><span class="price">35 MDL</span></li>
+          <li><span data-ro="Zmeură – Coacăză" data-ru="Малина – Смородина">Raspberry – Currant</span><span class="price">35 MDL</span></li>
+          <li><span data-ro="Aloe – Pară" data-ru="Алоэ – Груша">Aloe – Pear</span><span class="price">40 MDL</span></li>
+          <li><span data-ro="Cătină" data-ru="Облепиха">Sea Buckthorn</span><span class="price">35 MDL</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ADDONS -->
+    <div id="addons" class="mt-40">
+      <div class="section-head">
+        <div>
+          <h2 data-ro="Adaosuri" data-ru="Добавки">Adaosuri</h2>
+          <p data-ro="Personalizează orice băutură după preferințe." data-ru="Настройте любой напиток под свои предпочтения.">Personalizează orice băutură după preferințe.</p>
+        </div>
+      </div>
+      <div class="addons-grid">
+        <div>
+          <h4 class="mt-40" style="margin-bottom:14px;" data-ro="Adaugă la cafea" data-ru="Добавить в кофе">Adaugă la cafea</h4>
+          <ul class="addon-list">
+            <li><span data-ro="Decaf" data-ru="Без кофеина">Decaf</span><span class="price">+5 MDL</span></li>
+            <li><span data-ro="Lapte" data-ru="Молоко">Milk</span><span class="price">+7 MDL</span></li>
+            <li><span data-ro="Lapte vegetal" data-ru="Растительное молоко">Vegan Milk</span><span class="price">+10 MDL</span></li>
+            <li><span data-ro="Lapte fără lactoză" data-ru="Безлактозное молоко">Lactose-free Milk</span><span class="price">+8 MDL</span></li>
+            <li><span data-ro="Sirop" data-ru="Сироп">Syrup</span><span class="price">+5 MDL</span></li>
+            <li><span data-ro="Piure de fructe" data-ru="Фруктовое пюре">Fruit Puree</span><span class="price">+7 MDL</span></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="mt-40" style="margin-bottom:14px;" data-ro="Funcțional (opțiuni vegane)" data-ru="Функциональные (веганские опции)">Funcțional (opțiuni vegane)</h4>
+          <ul class="addon-list">
+            <li><span data-ro="Protein Foam" data-ru="Протеиновая пенка">Protein Foam</span><span class="price">+15 MDL</span></li>
+            <li><span data-ro="Collagen" data-ru="Коллаген">Collagen</span><span class="price">+15 MDL</span></li>
+            <li><span data-ro="Blue Spirulina" data-ru="Голубая спирулина">Blue Spirulina</span><span class="price">+10 MDL</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <p class="menu-note" data-ro="Meniul și prețurile pot varia ușor între cele două locații și se pot actualiza fără preaviz." data-ru="Меню и цены могут немного отличаться между локациями и обновляться без предварительного уведомления.">Meniul și prețurile pot varia ușor între cele două locații și se pot actualiza fără preaviz.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="assets/logo-white.png" alt="Grassi Coffee"><span>Grassi Coffee</span></div>
+        <p data-ro="Cafea de specialitate 100% Arabica, matcha, smoothie-uri și băuturi funcționale — preparate cu grijă, în fiecare zi." data-ru="Спешелти кофе 100% арабика, матча, смузи и функциональные напитки — с заботой каждый день.">Cafea de specialitate 100% Arabica, matcha, smoothie-uri și băuturi funcționale — preparate cu grijă, în fiecare zi.</p>
+        <div class="social-row">
+          <a href="https://www.instagram.com/grassi.coffee/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+          </a>
+          <a href="https://www.facebook.com/p/Grassi-Coffee-61585398815367/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 8h2V4h-2c-2.2 0-4 1.8-4 4v2H9v4h2v6h4v-6h2.5l.5-4H15V8c0-.6.4-1 1-1z" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h5 data-ro="Navigare" data-ru="Навигация">Navigare</h5>
+        <ul>
+          <li><a href="index.html" data-ro="Acasă" data-ru="Главная">Acasă</a></li>
+          <li><a href="meniu.html" data-ro="Meniu" data-ru="Меню">Meniu</a></li>
+          <li><a href="despre.html" data-ro="Despre noi" data-ru="О нас">Despre noi</a></li>
+          <li><a href="contact.html" data-ro="Contact" data-ru="Контакты">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-ro="Locații" data-ru="Локации">Locații</h5>
+        <ul>
+          <li>Bd. Ștefan cel Mare și Sfânt 132</li>
+          <li>Str. Pușkin 28/3</li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-ro="Program" data-ru="Часы работы">Program</h5>
+        <ul>
+          <li data-ro="Luni – Duminică: 07:30 – 21:00*" data-ru="Пн – Вс: 07:30 – 21:00*">Luni – Duminică: 07:30 – 21:00*</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span class="current-year"></span> Grassi Coffee. <span data-ro="Toate drepturile rezervate." data-ru="Все права защищены.">Toate drepturile rezervate.</span></span>
+      <span data-ro="Chișinău, Republica Moldova" data-ru="Кишинёв, Республика Молдова">Chișinău, Republica Moldova</span>
+    </div>
+  </div>
+</footer>
+
+<div class="wishlist-overlay"></div>
+<aside class="wishlist-drawer">
+  <div class="wishlist-head">
+    <h3 data-ro="Lista mea" data-ru="Мой список">Lista mea</h3>
+    <button class="wishlist-close" aria-label="Close" type="button">×</button>
+  </div>
+  <p class="wishlist-note" data-ro="Salvată doar în acest browser — nu trimite comanda către cafenea. Arat-o baristului sau sună-ne pentru a plasa comanda." data-ru="Сохраняется только в этом браузере — не отправляет заказ в кофейню. Покажи бариста или позвони нам, чтобы оформить заказ.">Salvată doar în acest browser — nu trimite comanda către cafenea. Arat-o baristului sau sună-ne pentru a plasa comanda.</p>
+  <ul class="wishlist-items"></ul>
+  <div class="wishlist-empty" data-ro="Lista este goală." data-ru="Список пуст.">Lista este goală.</div>
+  <div class="wishlist-footer">
+    <div class="wishlist-total-row">
+      <span data-ro="Total estimat" data-ru="Примерная сумма">Total estimat</span>
+      <strong class="wishlist-total">0 MDL</strong>
+    </div>
+    <button class="btn btn-outline wishlist-clear" data-ro="Golește lista" data-ru="Очистить список">Golește lista</button>
+  </div>
+</aside>
+
+<script src="js/main.js"></script>
+</body>
+</html>
