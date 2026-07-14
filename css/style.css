@@ -615,11 +615,10 @@ table.price-table tr:hover td{background:var(--cream);}
 .about-visual{
   aspect-ratio:1/1;
   border-radius:32px;
-  background:linear-gradient(160deg,var(--coffee-900),var(--coffee-700));
   box-shadow:var(--shadow);
-  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
 }
-.about-visual img{width:44%;opacity:0.95;}
+.about-visual img{width:100%;height:100%;object-fit:cover;}
 .about-copy p{margin-bottom:18px;color:var(--coffee-700);}
 .values{
   display:grid;
