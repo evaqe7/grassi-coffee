@@ -264,7 +264,7 @@ if (contactForm) {
   const selector = [
     '.menu-card', '.item-card', '.value-card', '.location-card',
     '.price-table-wrap', '.review-strip', '.promo-band', '.cta-band',
-    '.contact-info-card', '#contact-form', '.section-head'
+    '.contact-info-card', '#contact-form', '.section-head', '.qr-card'
   ].join(',');
   const targets = document.querySelectorAll(selector);
   if (!targets.length) return;
@@ -335,6 +335,22 @@ if (contactForm) {
   }, { threshold: 0.6 });
 
   targets.forEach(el => observer.observe(el));
+})();
+
+// Reduceri page — generate a QR code linking to the Telegram bot
+(function initQrGenerator() {
+  const btn = document.getElementById('generate-qr-btn');
+  if (!btn) return;
+  const result = document.getElementById('qr-result');
+  const img = document.getElementById('qr-image');
+  const telegramUrl = 'https://t.me/GRASSICoffeebot';
+
+  btn.addEventListener('click', () => {
+    img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=' + encodeURIComponent(telegramUrl);
+    result.hidden = false;
+    result.classList.add('show');
+    result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
 })();
 
 // Back to top button — created dynamically so it works on every page

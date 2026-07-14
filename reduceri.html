@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reduceri — Grassi Coffee</title>
+<meta name="description" content="Reduceri și oferte exclusive Grassi Coffee — generează codul QR și accesează-le direct din bot-ul nostru de Telegram.">
+<link rel="icon" href="assets/logo-dark.png" type="image/png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/logo-dark.png" alt="Grassi Coffee logo">
+      <span>GRASSI<small>COFFEE</small></span>
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" data-ro="Acasă" data-ru="Главная">Acasă</a></li>
+        <li><a href="meniu.html" data-ro="Meniu" data-ru="Меню">Meniu</a></li>
+        <li><a href="despre.html" data-ro="Despre noi" data-ru="О нас">Despre noi</a></li>
+        <li><a href="contact.html" data-ro="Contact" data-ru="Контакты">Contact</a></li>
+        <li><a href="reduceri.html" class="active" data-ro="Reduceri" data-ru="Скидки">Reduceri</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-toggle">
+        <button data-lang="ro" class="active">RO</button>
+        <button data-lang="ru">RU</button>
+      </div>
+      <a href="meniu.html" class="btn btn-primary" data-ro="Vezi meniul" data-ru="Смотреть меню">Vezi meniul</a>
+      <button class="wishlist-toggle" aria-label="Lista mea" type="button"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20.5s-7.5-4.6-10-9.2C.4 8 1.8 4.5 5 3.6c2-.6 4 .1 5.2 1.8L12 7.3l1.8-1.9C15 3.7 17 3 19 3.6c3.2.9 4.6 4.4 3 7.7-2.5 4.6-10 9.2-10 9.2z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="wishlist-count" hidden>0</span></button>
+      <button class="nav-toggle" aria-label="Meniu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="section-tag" data-ro="Reduceri" data-ru="Скидки">Reduceri</span>
+    <h1 data-ro="Reduceri și oferte exclusive" data-ru="Скидки и эксклюзивные предложения">Reduceri și oferte exclusive</h1>
+    <p data-ro="Generează codul QR și scanează-l cu telefonul pentru a accesa reducerile noastre, direct din bot-ul de Telegram." data-ru="Сгенерируй QR-код и отсканируй его телефоном, чтобы получить доступ к нашим скидкам прямо в Telegram-боте.">Generează codul QR și scanează-l cu telefonul pentru a accesa reducerile noastre, direct din bot-ul de Telegram.</p>
+  </div>
+</section>
+
+<section style="padding-top:20px;">
+  <div class="container">
+    <div class="qr-card">
+      <h2 data-ro="Codul tău de reduceri" data-ru="Твой код на скидку">Codul tău de reduceri</h2>
+      <p data-ro="Apasă butonul de mai jos pentru a genera un cod QR către bot-ul nostru de Telegram, unde găsești reducerile și ofertele active." data-ru="Нажми на кнопку ниже, чтобы сгенерировать QR-код в наш Telegram-бот, где ты найдёшь актуальные скидки и предложения.">Apasă butonul de mai jos pentru a genera un cod QR către bot-ul nostru de Telegram, unde găsești reducerile și ofertele active.</p>
+      <button id="generate-qr-btn" class="btn btn-primary mt-40" type="button" data-ro="Generează codul QR" data-ru="Сгенерировать QR-код">Generează codul QR</button>
+      <div id="qr-result" class="qr-result" hidden>
+        <img id="qr-image" alt="Cod QR Grassi Coffee — Telegram">
+        <p data-ro="Scanează cu camera telefonului sau apasă mai jos." data-ru="Отсканируй камерой телефона или нажми ниже.">Scanează cu camera telefonului sau apasă mai jos.</p>
+        <a href="https://t.me/GRASSICoffeebot" target="_blank" rel="noopener" class="btn btn-outline" data-ro="Deschide în Telegram" data-ru="Открыть в Telegram">Deschide în Telegram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="assets/logo-white.png" alt="Grassi Coffee"><span>Grassi Coffee</span></div>
+        <p data-ro="Cafea de specialitate 100% Arabica, matcha, smoothie-uri și băuturi funcționale — preparate cu grijă, în fiecare zi." data-ru="Спешелти кофе 100% арабика, матча, смузи и функциональные напитки — с заботой каждый день.">Cafea de specialitate 100% Arabica, matcha, smoothie-uri și băuturi funcționale — preparate cu grijă, în fiecare zi.</p>
+        <div class="social-row">
+          <a href="https://www.instagram.com/grassi.coffee/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+          </a>
+          <a href="https://t.me/GRASSICoffeebot" target="_blank" rel="noopener" aria-label="Telegram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h5 data-ro="Navigare" data-ru="Навигация">Navigare</h5>
+        <ul>
+          <li><a href="index.html" data-ro="Acasă" data-ru="Главная">Acasă</a></li>
+          <li><a href="meniu.html" data-ro="Meniu" data-ru="Меню">Meniu</a></li>
+          <li><a href="despre.html" data-ro="Despre noi" data-ru="О нас">Despre noi</a></li>
+          <li><a href="contact.html" data-ro="Contact" data-ru="Контакты">Contact</a></li>
+          <li><a href="reduceri.html" data-ro="Reduceri" data-ru="Скидки">Reduceri</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-ro="Locații" data-ru="Локации">Locații</h5>
+        <ul>
+          <li>Bd. Ștefan cel Mare și Sfânt 132</li>
+          <li>Str. Albișoara 4</li>
+          <li>Str. Pușkin 28/3</li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-ro="Program" data-ru="Часы работы">Program</h5>
+        <ul>
+          <li data-ro="Luni – Duminică: 07:30 – 21:00" data-ru="Пн – Вс: 07:30 – 21:00">Luni – Duminică: 07:30 – 21:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span class="current-year"></span> Grassi Coffee. <span data-ro="Toate drepturile rezervate." data-ru="Все права защищены.">Toate drepturile rezervate.</span></span>
+      <span data-ro="Chișinău, Republica Moldova" data-ru="Кишинёв, Республика Молдова">Chișinău, Republica Moldova</span>
+    </div>
+  </div>
+</footer>
+
+<div class="wishlist-overlay"></div>
+<aside class="wishlist-drawer">
+  <div class="wishlist-head">
+    <h3 data-ro="Lista mea" data-ru="Мой список">Lista mea</h3>
+    <button class="wishlist-close" aria-label="Close" type="button">×</button>
+  </div>
+  <p class="wishlist-note" data-ro="Salvată doar în acest browser — nu trimite comanda către cafenea. Arat-o baristului sau sună-ne pentru a plasa comanda." data-ru="Сохраняется только в этом браузере — не отправляет заказ в кофейню. Покажи бариста или позвони нам, чтобы оформить заказ.">Salvată doar în acest browser — nu trimite comanda către cafenea. Arat-o baristului sau sună-ne pentru a plasa comanda.</p>
+  <ul class="wishlist-items"></ul>
+  <div class="wishlist-empty" data-ro="Lista este goală." data-ru="Список пуст.">Lista este goală.</div>
+  <div class="wishlist-footer">
+    <div class="wishlist-total-row">
+      <span data-ro="Total estimat" data-ru="Примерная сумма">Total estimat</span>
+      <strong class="wishlist-total">0 MDL</strong>
+    </div>
+    <button class="btn btn-outline wishlist-clear" data-ro="Golește lista" data-ru="Очистить список">Golește lista</button>
+  </div>
+</aside>
+
+<script src="js/main.js"></script>
+</body>
+</html>
