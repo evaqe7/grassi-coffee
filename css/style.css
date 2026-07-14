@@ -862,3 +862,132 @@ table.price-table tr:hover td{background:var(--cream);}
   .menu-teaser-grid,.menu-grid{grid-template-columns:1fr;}
   .footer-grid{grid-template-columns:1fr;}
 }
+
+/* ============ Animations ============ */
+
+/* Scroll reveal — JS toggles .in-view when an element enters the viewport */
+.menu-card,
+.item-card,
+.value-card,
+.location-card,
+.price-table-wrap,
+.review-strip,
+.promo-band,
+.cta-band,
+.contact-info-card,
+#contact-form,
+.section-head{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);
+}
+.menu-card.in-view,
+.item-card.in-view,
+.value-card.in-view,
+.location-card.in-view,
+.price-table-wrap.in-view,
+.review-strip.in-view,
+.promo-band.in-view,
+.cta-band.in-view,
+.contact-info-card.in-view,
+#contact-form.in-view,
+.section-head.in-view{
+  opacity:1;
+  transform:translateY(0);
+}
+@media (prefers-reduced-motion: reduce){
+  .menu-card,.item-card,.value-card,.location-card,.price-table-wrap,
+  .review-strip,.promo-band,.cta-band,.contact-info-card,#contact-form,.section-head{
+    opacity:1 !important;transform:none !important;transition:none !important;
+  }
+}
+
+/* stagger grid children */
+.menu-teaser-grid > *, .menu-grid > *, .values > * {
+  transition-delay:calc(var(--reveal-i, 0) * 70ms);
+}
+
+/* Hero carousel — slow Ken Burns zoom while a slide is active */
+.hero-slide img{transform:scale(1);transition:none;}
+.hero-slide.active img{
+  animation:kenburns 9s ease-out forwards;
+}
+@keyframes kenburns{
+  from{transform:scale(1.1);}
+  to{transform:scale(1);}
+}
+
+/* Drink photo hover zoom */
+.menu-card .cup img,
+.item-card .cup img{transition:transform .45s cubic-bezier(.2,.7,.2,1), filter .3s ease;}
+.menu-card:hover .cup img,
+.item-card:hover .cup img{transform:scale(1.07) translateY(-4px);}
+
+/* Card lift already exists on .menu-card; extend to item-card + value/location cards */
+.item-card,.value-card,.location-card{transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .35s ease, box-shadow .35s ease;}
+.item-card:hover,.value-card:hover,.location-card:hover{transform:translateY(-6px);box-shadow:0 18px 34px rgba(43,29,20,0.14);}
+.item-card.in-view:hover,.value-card.in-view:hover,.location-card.in-view:hover{transform:translateY(-6px);}
+
+/* Nav underline + buttons already animated; add a gentle press effect */
+.btn:active{transform:translateY(0) scale(.97);}
+
+/* Wishlist badge pulse when the count changes */
+@keyframes pulse{
+  0%{transform:scale(1);}
+  30%{transform:scale(1.35);}
+  60%{transform:scale(.92);}
+  100%{transform:scale(1);}
+}
+.wishlist-count.pulse{animation:pulse .45s ease;}
+.wishlist-toggle.bump{animation:bump .4s ease;}
+@keyframes bump{
+  0%,100%{transform:rotate(0deg);}
+  25%{transform:rotate(-8deg);}
+  60%{transform:rotate(8deg);}
+}
+
+/* Animated counters (hero stats, review score) get a subtle rise-in */
+.hero-stats div strong,.review-score strong{
+  display:inline-block;
+}
+
+/* Back to top button (created by JS) */
+.back-to-top{
+  position:fixed;
+  right:24px;
+  bottom:24px;
+  z-index:150;
+  width:46px;height:46px;
+  border-radius:50%;
+  background:var(--coffee-900);
+  color:var(--cream);
+  border:none;
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;
+  box-shadow:0 10px 24px rgba(43,29,20,0.3);
+  opacity:0;
+  transform:translateY(16px) scale(.85);
+  pointer-events:none;
+  transition:opacity .3s ease, transform .3s ease, background .2s ease;
+}
+.back-to-top.show{opacity:1;transform:translateY(0) scale(1);pointer-events:auto;}
+.back-to-top:hover{background:var(--accent-dark);}
+
+/* Logo + brand micro hover */
+.brand img{transition:transform .35s cubic-bezier(.2,.7,.2,1);}
+.brand:hover img{transform:rotate(-6deg) scale(1.06);}
+
+/* Pill buttons: smoother press */
+.pill{transition:all .25s cubic-bezier(.2,.7,.2,1);}
+
+/* Page fade-in on load */
+body{animation:pageIn .5s ease both;}
+@keyframes pageIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+@media (prefers-reduced-motion: reduce){
+  body{animation:none;}
+  .hero-slide.active img{animation:none;}
+}

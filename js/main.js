@@ -117,6 +117,8 @@ function removeWishlistItem(index) {
   saveWishlist(list);
 }
 
+let __prevWishlistQty = -1;
+
 function renderWishlist() {
   const list = getWishlist();
   const itemsEl = document.querySelector('.wishlist-items');
@@ -126,10 +128,23 @@ function renderWishlist() {
   if (!itemsEl) return;
 
   const totalQty = list.reduce((sum, item) => sum + item.qty, 0);
+  const grew = __prevWishlistQty !== -1 && totalQty > __prevWishlistQty;
+  __prevWishlistQty = totalQty;
+
   countEls.forEach(el => {
     el.textContent = totalQty;
     el.hidden = totalQty === 0;
+    if (grew) {
+      el.classList.remove('pulse');
+      void el.offsetWidth;
+      el.classList.add('pulse');
+    }
   });
+  if (grew && wishlistToggle) {
+    wishlistToggle.classList.remove('bump');
+    void wishlistToggle.offsetWidth;
+    wishlistToggle.classList.add('bump');
+  }
 
   if (emptyEl) emptyEl.hidden = list.length > 0;
   itemsEl.innerHTML = '';
@@ -243,3 +258,99 @@ if (contactForm) {
     contactForm.reset();
   });
 }
+
+// Scroll-reveal — fade/rise elements in as they enter the viewport, staggered per grid
+(function initScrollReveal() {
+  const selector = [
+    '.menu-card', '.item-card', '.value-card', '.location-card',
+    '.price-table-wrap', '.review-strip', '.promo-band', '.cta-band',
+    '.contact-info-card', '#contact-form', '.section-head'
+  ].join(',');
+  const targets = document.querySelectorAll(selector);
+  if (!targets.length) return;
+
+  // stagger index within each shared parent (menu grids, value grids, etc.)
+  const counters = new Map();
+  targets.forEach(el => {
+    const parent = el.parentElement;
+    const i = counters.get(parent) || 0;
+    el.style.setProperty('--reveal-i', Math.min(i, 8));
+    counters.set(parent, i + 1);
+  });
+
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach(el => el.classList.add('in-view'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  targets.forEach(el => observer.observe(el));
+})();
+
+// Animated counters — the big numbers in hero-stats / review-score count up once visible
+(function initCounters() {
+  const targets = document.querySelectorAll('.hero-stats strong, .review-score strong');
+  if (!targets.length || !('IntersectionObserver' in window)) return;
+
+  function animateCount(el) {
+    const raw = el.textContent.trim();
+    const match = raw.match(/^([\d.,]+)(.*)$/);
+    if (!match) return;
+    const usesComma = match[1].includes(',');
+    const numStr = match[1].replace(',', '.');
+    const target = parseFloat(numStr);
+    const decimals = (numStr.split('.')[1] || '').length;
+    const suffix = match[2];
+    if (isNaN(target)) return;
+
+    const duration = 900;
+    const start = performance.now();
+
+    function frame(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const value = (target * eased).toFixed(decimals);
+      el.textContent = (usesComma ? value.replace('.', ',') : value) + suffix;
+      if (progress < 1) requestAnimationFrame(frame);
+      else el.textContent = raw;
+    }
+    requestAnimationFrame(frame);
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCount(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.6 });
+
+  targets.forEach(el => observer.observe(el));
+})();
+
+// Back to top button — created dynamically so it works on every page
+(function initBackToTop() {
+  const btn = document.createElement('button');
+  btn.className = 'back-to-top';
+  btn.type = 'button';
+  btn.setAttribute('aria-label', 'Back to top');
+  btn.innerHTML = '↑';
+  document.body.appendChild(btn);
+
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('show', window.scrollY > 500);
+  }, { passive: true });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
