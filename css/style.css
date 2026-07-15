@@ -806,7 +806,7 @@ table.price-table tr:hover td{background:var(--cream);}
   border-radius:16px;
   box-shadow:var(--shadow);
   margin:0 auto 18px;
-  filter:blur(20px);
+  filter:blur(10px);
 }
 .qr-result p{margin-bottom:18px;}
 
