@@ -775,6 +775,11 @@ table.price-table tr:hover td{background:var(--cream);}
 .social-row a:hover{background:var(--accent);color:var(--white);}
 
 /* Reduceri / QR card */
+.qr-section{
+  min-height:60vh;
+  display:flex;
+  align-items:center;
+}
 .qr-card{
   background:var(--white);
   border-radius:var(--radius);
@@ -796,10 +801,11 @@ table.price-table tr:hover td{background:var(--cream);}
 }
 .qr-result.show{opacity:1;transform:translateY(0);}
 .qr-result img{
+  display:block;
   width:220px;height:220px;
   border-radius:16px;
   box-shadow:var(--shadow);
-  margin-bottom:18px;
+  margin:0 auto 18px;
 }
 .qr-result p{margin-bottom:18px;}
 
